@@ -1,0 +1,60 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des Dépenses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gestion des Dépenses</h1>
+    <form id="expenseForm">
+      <label>Titre</label>
+      <input type="text" id="titre" required>
+      <label>Montant</label>
+      <input type="number" id="montant" required>
+      <label>Catégorie</label>
+      <select id="categorie">
+        <option>Quotidien</option>
+        <option>Loisirs</option>
+        <option>Transport</option>
+        <option>Courses</option>
+      </select>
+      <button type="submit">Ajouter</button>
+    </form>
+
+    <label for="filter">Filtrer par catégorie :</label>
+    <select id="filter">
+      <option value="Toutes">Toutes</option>
+      <option value="Quotidien">Quotidien</option>
+      <option value="Loisirs">Loisirs</option>
+      <option value="Transport">Transport</option>
+      <option value="Courses">Courses</option>
+    </select>
+
+    <table id="expensesTable">
+      <thead>
+        <tr>
+          <th>Titre</th>
+          <th>Montant</th>
+          <th>Catégorie</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Les dépenses apparaissent ici -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3"><strong>Total :</strong></td>
+          <td id="total">0.00 €</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
